@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+       function rps(choice){
+        let aiChoice = Math.floor(Math.random() * 2);
+        switch (aiChoice) {
+            case 0:
+                if (choice == "rock"){
+                    return("u win")
+                } else if (choice == "paper") {
+                    return("u lose")
+                } else {return("draw")};
+                break;
+            case 1:
+                if (choice == "paper"){
+                    return("u win")
+                } else if (choice == "scissor") {
+                    return("u lose")
+                } else {return("draw")};
+                break;
+            case 2:
+                if (choice == "scissor"){
+                    return("u win")
+                } else if (choice == "rock") {
+                    return("u lose")
+                } else {return("draw")};
+                break;
+        };
+       };
+
+       let choice = prompt()
+       console.log(rps(choice))
+    </script>
+</html>
