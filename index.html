@@ -6,37 +6,58 @@
     <title>Document</title>
 </head>
 <body>
-    
-</body>
-    <script>
-       function rps(choice){
-        let aiChoice = Math.floor(Math.random() * 2);
-        switch (aiChoice) {
-            case 0:
-                if (choice == "rock"){
-                    return("u win")
-                } else if (choice == "paper") {
-                    return("u lose")
-                } else {return("draw")};
-                break;
-            case 1:
-                if (choice == "paper"){
-                    return("u win")
-                } else if (choice == "scissor") {
-                    return("u lose")
-                } else {return("draw")};
-                break;
-            case 2:
-                if (choice == "scissor"){
-                    return("u win")
-                } else if (choice == "rock") {
-                    return("u lose")
-                } else {return("draw")};
-                break;
-        };
-       };
+    <h1>THE TITLE OF YOUR WEBPAGE</h1>
+    <div id="container">
 
-       let choice = prompt()
-       console.log(rps(choice))
+    </div>
+  </body>
+  
+    <script>
+        function alertMe(){
+            alert("fiahoia");
+        };
+
+        const container = document.querySelector("#container");
+
+        const content = document.createElement("div");
+        content.classList.add("content");
+        content.textContent = "Hello world";
+        container.appendChild(content);
+
+        const red = document.createElement("p");
+        red.classList.add("red")
+        red.textContent = "Hey i'm red!";
+        red.setAttribute("style", "color: red;");
+        container.append(content,red);
+
+        const blue = document.createElement("h3");
+        blue.classList.add("blue")
+        blue.textContent = "Henlo am blue";
+        blue.setAttribute("style", "color: blue;");
+        container.append(blue);
+
+        const container2 = document.createElement("div");
+        container2.classList.add("cont");
+        container2.setAttribute("style", "border: 2px solid black; background-color: pink;");
+        
+
+        const divh1 = document.createElement("h1");
+        divh1.textContent = "hey im inside a div!";
+
+        const divp = document.createElement("p");
+        divp.textContent = "hey me too!";
+        container2.append(divh1, divp);
+
+        const btn = document.createElement("button");
+        btn.textContent = "click me baby";
+        // btn.onclick = () => alert("ooonyaa~");
+        btn.addEventListener("click", alertMe);
+
+
+        container2.append(btn);
+
+
+
+        container.appendChild(container2);
     </script>
 </html>
